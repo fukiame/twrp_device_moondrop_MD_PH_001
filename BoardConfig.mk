@@ -207,6 +207,8 @@ TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_FASTBOOTD := true
 
+TW_EXCLUDE_NANO := true
+
 # PBRP specific build flags
 #PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
 #PB_DISABLE_DEFAULT_DM_VERITY := true
