@@ -9,6 +9,8 @@ DEVICE_PATH := device/moondrop/MD_PH_001
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -106,6 +108,7 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 
+
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
@@ -114,3 +117,16 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_FASTBOOTD := true
+
+# PBRP specific build flags
+#PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
+#PB_DISABLE_DEFAULT_DM_VERITY := true
+#PB_DISABLE_DEFAULT_TREBLE_COMP := true
+
+#Exclusions
+#TW_EXCLUDE_TWRPAPP := true
+#TW_EXCLUDE_NANO := true
+#TW_EXCLUDE_PYTHON := true
+#TW_EXCLUDE_BASH := true
+#TW_EXCLUDE_APEX := true
+#TW_EXCLUDE_SUPERSU := true
