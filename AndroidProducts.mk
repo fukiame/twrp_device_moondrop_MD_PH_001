@@ -9,6 +9,4 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/twrp_MD_PH_001.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_MD_PH_001-user \
-    twrp_MD_PH_001-userdebug \
     twrp_MD_PH_001-eng

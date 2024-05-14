@@ -7,7 +7,7 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
@@ -20,10 +20,3 @@ PRODUCT_NAME := twrp_MD_PH_001
 PRODUCT_BRAND := MOONDROP
 PRODUCT_MODEL := MD-PH-001
 PRODUCT_MANUFACTURER := moondrop
-
-PRODUCT_GMS_CLIENTID_BASE := android-moondrop
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="MD_PH_001-user 12 SP1A.210812.016 1711681716 release-keys"
-
-BUILD_FINGERPRINT := MOONDROP/MD_PH_001/MD_PH_001:12/SP1A.210812.016/1711681716:user/release-keys
