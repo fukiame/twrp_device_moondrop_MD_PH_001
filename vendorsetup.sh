@@ -1,4 +1,4 @@
-#
+#!/bin/sh
 # Copyright (C) 2024 The Android Open Source Project
 # Copyright (C) 2024 SebaUbuntu's TWRP device tree generator
 #
@@ -15,9 +15,10 @@ export FOX_AB_DEVICE=1
 export OF_FORCE_PREBUILT_KERNEL=1
 export OF_DEFAULT_KEYMASTER_VERSION=4.1
 export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
-export OF_MAINTAINER="dmpstr"
+export OF_MAINTAINER="dmpstr@KangingAt25"
 export FOX_VARIANT="A13+"
 export OF_FLASHLIGHT_ENABLE=0
+export TW_MAX_BRIGHTNESS=2500
 
 export FOX_USE_BASH_SHELL=1
 export FOX_USE_NANO_EDITOR=1
