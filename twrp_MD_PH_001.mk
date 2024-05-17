@@ -18,7 +18,7 @@ $(call inherit-product, device/moondrop/MD_PH_001/device.mk)
 PRODUCT_DEVICE := MD_PH_001
 PRODUCT_NAME := twrp_MD_PH_001
 PRODUCT_BRAND := MOONDROP
-PRODUCT_MODEL := MD-PH-001
+PRODUCT_MODEL := MD_PH_001
 PRODUCT_MANUFACTURER := moondrop
 
 PRODUCT_GMS_CLIENTID_BASE := android-moondrop
