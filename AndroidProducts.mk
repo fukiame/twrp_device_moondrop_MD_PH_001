@@ -6,7 +6,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_MD_PH_001.mk
+    $(LOCAL_DIR)/twrp_MD_PH_001.mk
 
 COMMON_LUNCH_CHOICES := \
     twrp_MD_PH_001-user \

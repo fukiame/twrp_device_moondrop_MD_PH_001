@@ -6,6 +6,6 @@
 #
 
 #add_lunch_combo is deprecated, use COMMON_LUNCH_CHOICES
-#add_lunch_combo omni_MD_PH_001-user
-#add_lunch_combo omni_MD_PH_001-userdebug
-#add_lunch_combo omni_MD_PH_001-eng
+#add_lunch_combo twrp_MD_PH_001-user
+#add_lunch_combo twrp_MD_PH_001-userdebug
+#add_lunch_combo twrp_MD_PH_001-eng
