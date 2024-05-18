@@ -4,6 +4,10 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+LOCAL_PATH := device/moondrop/MD_PH_001
+
+# Release name
+PRODUCT_RELEASE_NAME := MD_PH_001
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -26,3 +30,12 @@ PRODUCT_NAME := twrp_MD_PH_001
 PRODUCT_BRAND := MOONDROP
 PRODUCT_MODEL := MD-PH-001
 PRODUCT_MANUFACTURER := moondrop
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE=MD_PH_001 \
+    PRODUCT_NAME=MD_PH_001 \
+    PRIVATE_BUILD_DESC="MD_PH_001-user 13 TP1A.220624.014 1711682717 release-keys"
+
+BUILD_FINGERPRINT := MOONDROP/MD_PH_001/MD_PH_001:12/SP1A.210812.016/1711681716:user/release-keys
+
+# conditions for share or recreate: always mention credits for lopestom.
