@@ -6,7 +6,23 @@
 #
 
 LOCAL_PATH := device/moondrop/MD_PH_001
+# Enable project quotas and casefolding for emulated storage without sdcardfs
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# Dynamic Partitions stuff
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 31
+
+# API
+PRODUCT_SHIPPING_API_LEVEL := 31
+
+PRODUCT_PLATFORM := mt6877
+
 # A/B
+ENABLE_VIRTUAL_AB := true
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -23,6 +39,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctrl
+
+PRODUCT_PACKAGES_DEBUG += \
+    update_engine_client
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
