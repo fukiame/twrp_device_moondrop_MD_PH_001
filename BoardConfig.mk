@@ -8,6 +8,7 @@
 DEVICE_PATH := device/moondrop/MD_PH_001
 
 # For building with minimal manifest
+ALLOW_MISSING_DEPENDENCIES := true
 
 # Architecture
 TARGET_ARCH := arm64
