@@ -10,6 +10,13 @@
 /dev/block/sdb                                   0660    root    system
 /dev/block/sdc                                   0660    root    system
 
+#elliptic sensor
+/dev/elliptic0            0644   system     system
+/dev/elliptic1            0644   system     system
+
+#Antai <AI_BSP_FP> <suzh> <2023-06-25> add for 2302 begin        
+/dev/silead_fp                                   0660    system  system
+#Antai <AI_BSP_FP> <suzh> <2023-06-25> add for 2302 end
 # eMMC/UFS common
 /dev/block/by-name/misc2     0660    root    system
 /dev/block/by-name/boot      0640    root    system
@@ -168,43 +175,8 @@
 /dev/RT_Monitor           0600   system     system
 /dev/kick_powerkey        0600   system     system
 
-# yft-drv add for led rgb light begin.
-/sys/class/leds/green delay_on 0664 system system
-/sys/class/leds/red delay_on 0664 system system
-/sys/class/leds/blue delay_on 0664 system system
-/sys/class/leds/green delay_off 0664 system system
-/sys/class/leds/red delay_off 0664 system system
-/sys/class/leds/blue delay_off 0664 system system
-/sys/class/leds/red tr1 0664 system system
-/sys/class/leds/red tr2 0664 system system
-/sys/class/leds/red tf1 0664 system system
-/sys/class/leds/red tf2 0664 system system
-/sys/class/leds/red ton 0664 system system
-/sys/class/leds/red toff 0664 system system
-/sys/class/leds/green tr1 0664 system system
-/sys/class/leds/green tr2 0664 system system
-/sys/class/leds/green tf1 0664 system system
-/sys/class/leds/green tf2 0664 system system
-/sys/class/leds/green ton 0664 system system
-/sys/class/leds/green toff 0664 system system
-/sys/class/leds/blue tr1 0664 system system
-/sys/class/leds/blue tr2 0664 system system
-/sys/class/leds/blue tf1 0664 system system
-/sys/class/leds/blue tf2 0664 system system
-/sys/class/leds/blue ton 0664 system system
-/sys/class/leds/blue toff 0664 system system
-/sys/class/leds/red pwm_dim_duty 0664 system system
-/sys/class/leds/red pwm_dim_freq 0664 system system
-/sys/class/leds/green pwm_dim_duty 0664 system system
-/sys/class/leds/green pwm_dim_freq 0664 system system
-/sys/class/leds/blue pwm_dim_duty 0664 system system
-/sys/class/leds/blue pwm_dim_freq 0664 system system
-#yft-drv add for led rgb light end.
-
 #MTK In-House TEE
 /dev/ttyACM0              0660   radio      radio
 
-#TrustKernel
-/dev/tkcoredrv            0660   root       system
-/dev/rpmb0                0660   root       system
-/dev/mmcblk0rpmb          0660   root       system
+
+
