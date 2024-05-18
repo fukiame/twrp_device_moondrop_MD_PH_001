@@ -39,3 +39,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := MOONDROP/MD_PH_001/MD_PH_001:12/SP1A.210812.016/1711681716:user/release-keys
 
 # conditions for share or recreate: always mention credits for lopestom.
+
+# Added by Shirayuki39
+# Thanks lopestom
