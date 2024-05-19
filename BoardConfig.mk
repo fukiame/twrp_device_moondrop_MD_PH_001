@@ -34,12 +34,8 @@ TARGET_NO_BOOTLOADER := true
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6877
-#TARGET_BOARD_PLATFORM_GPU := Mali-G68 MC4
 
-#BOARD_HAS_MTK_HARDWARE := true
 BOARD_USES_MTK_HARDWARE := true
-#MTK_HARDWARE := true
-
 
 # A/B
 AB_OTA_UPDATER := true
@@ -127,11 +123,6 @@ BOARD_SUPER_PARTITION_GROUPS := moondrop_dynamic_partitions
 BOARD_MOONDROP_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product
 BOARD_MOONDROP_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 
-
-
-# Security patch level
-VENDOR_SECURITY_PATCH := 2021-08-0
-
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
@@ -139,28 +130,14 @@ BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 PLATFORM_VERSION := 99.87.36
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 
-#PLATFORM_SECURITY_PATCH := 2022-12-05
-#VENDOR_SECURITY_PATCH := 2023-02-01
-#PLATFORM_VERSION := 12.0.0
-
-# Charger
-# Reference: https://android.googlesource.com/platform/hardware/interfaces/+/refs/tags/android-13.0.0_r3/health/aidl/#charger-enable-suspend
-BOARD_CHARGER_ENABLE_SUSPEND := true
-TARGET_DISABLE_TRIPLE_BUFFERING := false
-BOARD_CHARGER_DISABLE_INIT_BLANK := true
-
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS += metadata
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
-#TW_INCLUDE_CRYPTO := false
 TW_INCLUDE_CRYPTO_FBE := true
-#TW_INCLUDE_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
-# fscrypt policy FBEv2
-TW_USE_FSCRYPT_POLICY := 2
 TW_PREPARE_DATA_MEDIA_EARLY := true
 
 # Additional binaries & libraries needed for recovery
@@ -170,17 +147,11 @@ TARGET_RECOVERY_DEVICE_MODULES += \
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
-#TW_CRYPTO_FS_TYPE := "f2fs"
-#TW_CRYPTO_REAL_BLKDEV := "/dev/block/by-name/userdata"
-#TW_CRYPTO_MNT_POINT := "/data"
-##TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
-
 # Properties
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6877.rc
 
 # Recovery
-#TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/fstab.mt6877
 RECOVERY_SDCARD_ON_DATA := true
@@ -195,8 +166,6 @@ TW_INCLUDE_NTFS_3G := true
 TW_USE_TOOLBOX := true
 TARGET_USES_MKE2FS := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
-TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_NO_BATT_PERCENT := false
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
@@ -210,12 +179,6 @@ TW_INCLUDE_FASTBOOTD := true
 TW_EXCLUDE_NANO := true
 TW_EXCLUDE_BASH := true
 
-# PBRP specific build flags
-#PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
-#PB_DISABLE_DEFAULT_DM_VERITY := true
-#PB_DISABLE_DEFAULT_TREBLE_COMP := true
-
-#TW_DEFAULT_DEVICE_NAME := MD_PH_001
 TW_DEVICE_VERSION := MOONDROP MIAD-01 - Shirayuk428
 
 TW_THEME := portrait_hdpi
@@ -224,9 +187,7 @@ DEVICE_SCREEN_HEIGHT := 2460
 
 # Statusbar icons flags 1080 x 2400
 TW_STATUS_ICONS_ALIGN := center
-#TW_CUSTOM_CPU_POS := 50
 TW_CUSTOM_CLOCK_POS := 610
-#TW_CUSTOM_BATTERY_POS := 800
 
 # Storage
 TW_NO_USB_STORAGE := false
@@ -245,6 +206,3 @@ TARGET_USES_LOGD := true
 # Excludes
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_APEX := true
-#TW_INCLUDE_PYTHON := false
-#TW_EXCLUDE_ENCRYPTED_BACKUPS := false
-#TW_BACKUP_EXCLUSIONS := /data/fonts/files
