@@ -59,28 +59,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service \
 
-# Keystore
-PRODUCT_PACKAGES += \
-    android.system.keystore2
-
-# Keymint
-PRODUCT_PACKAGES += \
-    android.hardware.security.keymint \
-    android.hardware.security.secureclock \
-    android.hardware.security.sharedsecret
-
-# Drm
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4
-
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1
-
-# Additional target Libraries
-TARGET_RECOVERY_DEVICE_MODULES += \
-    android.hardware.keymaster@4.1
-
 # libion & libxml2
 TARGET_RECOVERY_DEVICE_MODULES += \
     libion \
