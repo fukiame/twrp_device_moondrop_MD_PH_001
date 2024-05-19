@@ -31,14 +31,17 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl-1.2-mtkimpl \
-    android.hardware.boot@1.2-mtkimpl \
-    android.hardware.boot@1.2-mtkimpl.recovery \
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-service
+    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-service
 
-PRODUCT_PACKAGES_DEBUG += \
-    bootctrl
+PRODUCT_PACKAGES += \
+    bootctrl.mt6877
+
+PRODUCT_PACKAGES := \
+    bootctrl.mt6877 \
+    libgptutils \
+    libz \
+    libcutils
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
